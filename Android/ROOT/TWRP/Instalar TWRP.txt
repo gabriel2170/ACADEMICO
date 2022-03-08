@@ -1,0 +1,26 @@
+-Coloque o arquivo TWRP.zip em qua´lquer pasta do android
+
+-Depois disso ative a Depuracao USB e o BootLoader atravez do modo desenvolvedor 
+no android
+
+-Reinicie o aparelho de forma para entrar no bootloader
+
+-Conecte o aparelho no PC 
+
+-Coloque o arquivo recovery na pasta ADB Tools
+
+-Abra o terminal dentro da pasta clicando em SHIFT + botao direito do mouse, depois clique 
+em abrir terminal de comando
+
+-digite o comando fastboot boot recovery.img
+
+-Apos isso no menu TWRP que apareceu no android, coloque sua senha do android, e depois
+clique no botao install que vai aparecer
+
+-Selecione o arquivo TWRP.zip que voce salvou no android, clique nele e depois deslize
+o botao abaixo para instalar o TWRP 
+
+-Se caso o seu arquivo TWRP nao tiver o zip e apenas o TWRP.img para por no android nao tem problema, pode 
+ignorar a etapa de colocar o zip no Android e fazer o resto que ele vai instalar do mesmo jeito
+
+

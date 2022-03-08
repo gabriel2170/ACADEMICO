@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+	public static void main(String[] args){
+    		Locale.setDefault(Locale.US);
+        	Scanner sc = new Scanner(System.in);
+       
+        	String x;
+        	x = sc.next();
+	    
+        	System.out.println("Voce digitou: " + x);
+        
+        
+        	int y;
+        	y = sc.nextInt();        
+        	System.out.println("Voce digitou: " + y);
+        
+        	double d;  
+        	d = sc.nextDouble();        
+        	System.out.printf("Voce digitou: %.2f%n" , d);
+        
+        	char c;
+        	c = sc.next().charAt(0);
+        	System.out.println("Voce digitou: " + c);
+        
+        	sc.close();
+        
+        
+    }
+}
