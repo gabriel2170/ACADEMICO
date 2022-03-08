@@ -1,0 +1,19 @@
+-voce pode definir tipos de valores nas funcoes tambem , de forma que vc informa o tipo de dado a ser retornado pela funcao
+-o void por padrao sera uma funcao em vazio, ou seja nao tera um return para retornar algo para fora da funcao
+
+
+
+function retornarNome(x): string {    
+    return x
+}
+
+function calculoPar(a,b): number{
+    return (a / b) % 2 == 0 ? 0 : 1 
+}
+
+console.log(calculoPar(3,7))
+
+
+function consulta():void{
+    console.log('Uma funcao em Vazio')
+}

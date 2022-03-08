@@ -1,0 +1,9 @@
+-voce pode declarar tipos nos atributos de um objeto na sua declaracao
+
+
+let obj: {nome: string, idade: number} = {
+    nome: 'gabriel',
+    idade: 25
+}
+
+console.log(`nome: ${obj.nome}  idade: ${obj.idade}`)

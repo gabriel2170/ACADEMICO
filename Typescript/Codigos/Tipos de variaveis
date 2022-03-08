@@ -1,0 +1,31 @@
+
+-As variaveis no typescript tem algumas limitações do que no javascript quando declaradas 
+-quando voce declarar uma variavel inicializando com algum valor numero ou string , automaticamente o typescript ja atribui o tipo da variavel para a variavel de forma que voce nao pode atribuir dados que nao sejam do mesmo tipo que da variavel 
+-se voce inicializar uma variavel com strings, voce so pode inserir strings, o mesmo vale para o restante, se voce nao inicializar com nenhuma voce pode atribuir o valor que voce quizer depois
+-outra forma de definir os tipos de variavel seria colocar : e o tipo da variavel em seguida na sua declaracao 
+
+
+let escrita = "Uma string"
+
+let nome: string
+
+/*
+escrita = "outro nome"  - esta correto
+escrita = 21 - nao é permitido pois variavel foi inicializada com uma string
+*/
+
+/*
+nome = "meu nome" - esta correto
+nome = 65 - nao permitido pois variavel foi declarada com um type string
+nome = true - nao permitido pois variavel foi declarada com um type string
+*/
+
+
+let tuple = [323, "teste", true]
+
+let tuple2:[number, string, boolean] = [544, "lib", false]
+
+//let tuple2:[string, string, string] = [544, "lib", false] - nao permitido pois as declaracoes de type da tupla nao condiz com os valores inseridos nela
+//tuple2 = ["lib2", "lib", "lib3"] - nao permitido pois os valores inseridos nao condiz com os 3 types definidos na tupla ao inicializala com alguns dados 
+//tupla = ["teste", 2321, "teste2"] - nao permitido pois os valores inseridos nao condiz com os 3 types definidos na tupla ao inicializala com alguns dados 
+

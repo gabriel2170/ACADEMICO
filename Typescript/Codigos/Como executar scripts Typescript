@@ -1,0 +1,14 @@
+-Para poder executar os scripts .ts typescript antes voce precisa executar no terminal o comando tsc nomeDoPrograma.ts 
+-esse comando vai comnverter o arquivo typescript para javascript
+-depois utilize o node para reproduzir o arquivo convertido .js
+
+
+tsc nomeDoPrograma.ts 
+
+
+ls 
+  nomeDoPrograma.ts
+  nomeDoPrograma.js
+
+
+node nomeDoPrograma.js

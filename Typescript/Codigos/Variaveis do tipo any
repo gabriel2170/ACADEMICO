@@ -1,0 +1,17 @@
+-Uma forma para declarar uma variavel de forma que o tipo dela seja variado do que eu quizer atribuir nela seria utilizando o tipo any 
+-Pois com o any eu posso declarar qualquer valor de qualquer tipo na variavel ou ate mesmo transformar a variavel em um objeto
+
+
+
+let x:any 
+
+x = 'gabriel'
+
+x = 10
+
+x = {
+    nome: 'gabriel',
+    data: 24/12/24
+}
+
+console.log(x)
