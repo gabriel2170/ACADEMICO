@@ -1,0 +1,131 @@
+//card.jsx
+
+-esse component card , esta sendo usado apenas para conter todo resultado do projeto em um card mostrado no HTML
+
+import './card.css'
+import React from 'react'
+
+
+export default (props)=>{
+
+
+    const carStyle = {
+        backgroundColor: props.color || '#F00',
+        boderColor: props.color || '#F00',
+
+    }
+    return <div className='Card' style={carStyle}>
+            <div className='Title'>{props.titulo}</div>
+            <div className='Content'>{props.children}</div>
+        </div>
+}
+
+
+-------------------------------------------------------------
+//card.css
+
+.Card{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500PX;
+    min-width: 500PX;
+}
+
+.Card .Title{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Card .Content{
+    flex: 1;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+---------------------------------------------------------------
+//index.css
+
+
+body{
+  background-color: rgb(43, 41, 41);
+  color: white;
+  font-family: Oswald;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+h1 ,h2 ,h3{
+  font-weight: 300;
+  
+}
+
+h2 ,h3{
+  margin: 0;
+  
+}
+
+
+---------------------------------------------------------------
+//App.css
+
+.App .Cards{
+    display: flex;
+    
+}
+
+---------------------------------------------------------------
+//App.jsx
+
+-para instroduzir numeros nos parametros dos components use {}
+-E repara que como o card vai conter todo o projeto ou seja o component desse projeto, ele é declarado em tag antes da tag do component que vamos armazenar no card
+-passamos alguns parametros no card como titulo e color mais para estetica , para reproduzir um titulo do projeto e deixar o card com uma cor
+
+import './App.css'
+import React from 'react'
+import Primeiro from './primeiro'
+import ComParametro from './ComParametro'
+import Fragmento from './fragmento'
+import Aleatorio from './aleatorio'
+import Card from './card'
+
+
+export default () => (
+
+    <div className='App' >
+        
+            <Card titulo='Desafio Aleatorio' color="#FA6545">
+                <Aleatorio min={1} max={60} />
+
+            </Card>
+
+            <Card titulo='Fragmento' color="#F3FA45">
+                <Fragmento />
+            </Card>
+
+            <Card titulo='Com Parametro' color='#45FAB5'>
+                <ComParametro
+                    aluno='Gabriel'
+                    nota={9.5}
+                    disciplina='matematica'
+                />
+            </Card>
+
+            <Card titulo='Primeiro Componente' color="#7345FAs">
+                <Primeiro />
+            </Card>
+
+    </div>
+);
+
+
+
+
+
+
+

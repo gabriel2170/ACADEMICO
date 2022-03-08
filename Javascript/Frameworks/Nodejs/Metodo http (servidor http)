@@ -1,0 +1,26 @@
+
+-http vai ser o modulo que vamos usar para criar o servidor http
+-o host vai indicar onde o servidor vai ser execultado
+-e a port vai armazenar a porta que vai ser usada pra comunicar o servidor http com o pc , por padrao porta 3000 nesse modulo
+-req de request vai servir para obter a resposta do servidor e o res de response vai ser usado para enviar uma resposta para o servidor
+-este simbolo ()=>{} é uma forma simplificada de declarar uma function
+-o statusCode vai servir para enviarmos uma resposta assim que ele estiver no codigo 200 do statusCode no console.log 
+-o setHeader serve para especificar qual tipo de resposta vamos enviar para o servidor, no caso um arquivo de texto nesse exemplo
+-o end finaliza o parametro de resposta res
+-apos o createServer para criar o servidor precisamos usar o listen reproduzir ele, informamos como parametro a porta e o host que ele vai reproduzir
+-para por variaveis dentro de um alert ou console.log utilize `` e dentro delas ${} para por as variaveis
+
+
+const http = require('http');
+const host = '127.0.0.1'
+const port = 3000
+
+const server = http.createServer((req, res)=>{
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('\nPrimeiro script\n')
+})
+
+server.listen(port, host, ()=>{
+    console.log(`Server running at http://${host}:${port}`)
+})

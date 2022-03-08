@@ -1,0 +1,40 @@
+-Criar repositorio git (master)
+git init
+
+
+--------------------------------------------------------------------
+-Adicionar arquivos no repositorio
+git add nome do arquivo
+
+
+--------------------------------------------------------------------
+-Confirmar alteracoes do repositorio
+git commit -m
+
+
+-------------------------------------------------------------------
+-Confirmação inicial do repositorio
+git commit -m"Initial Commit"
+
+
+---------------------------------------------------------------------
+-Criar repositorio remoto github
+git remote
+
+git remote add origin https://endereco do repositorio remoto github
+
+
+-------------------------------------------------------------------
+-Importar os arquivos do repositorio github para o git 
+git pull origin master --allow-unrelated-histories
+
+
+------------------------------------------------------------------
+-Exportar os arquivos do repositorio do git para o github
+git push -u origin master
+
+
+------------------------------------------------------------------
+-Criar arquivo package.json
+npm init 
+

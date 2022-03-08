@@ -1,0 +1,23 @@
+-podemos selecionar elementos pelos seus conteudos utilizando o comando contains na tag que contem alguma informacao que queremos usar dentro do contains
+-podemos colocar abreviacoes desse conteudo no contains tambem para ele filtrar na tag do elemento selecionado
+-o empty colocamos para filtrar elementos que nao possuem nenhum conteudo 
+-o parent serve para filtrar os elementos que possuem algum conteudo independente do tipo de informacao , nao precisamos especificar a informacao igual no contains
+-o has serve para filtrar os elementos atraves de tags de elementos que estao envolvidos nele 
+
+$('.menu li a:contains(About)').css('outline', 'solid red 2px')
+$('.menu li a:contains(Abo)').css('outline', 'solid red 2px')
+
+$('.cars_list li:empty').text('carro').css('background-color', 'red')
+$('.cars_list li:empty').text('carro').css({
+    
+    'background-color': 'red',
+    'color': 'white'
+
+})
+
+$('.cars_list li:parent').append('<span style="color: green"> - Tem Valor</span>')
+
+$('.cars_list li:has(span)').animate({
+    fontSize: '30px',
+    opacity: 0.7
+})

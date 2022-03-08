@@ -1,0 +1,58 @@
+//non_blocking.js
+
+-Com o algoritmo de conexao nao bloqueante ele nao necessita que o algoritmo seja executado em sequencia, ele pode fazer varios comandos durante a execução de um
+-o readFile permite fazer a leitura do arquivo sem ser sincronizada , porem voce deve passar 2 parametros em uma função , o err de retorno de algum erro e o data que retornaria algum dado 
+
+
+const fs = require('fs')
+
+console.log("Antes da execução do arquivo")
+console.log((process.hrtime()[0]/60).toFixed(5))
+
+const dados = fs.readFile('file.txt',(err,data)=>{
+    if(err) throw err
+    console.log(data)
+})
+
+
+console.log("Depois da execução do arquivo")
+console.log((process.hrtime()[0]/60).toFixed(5))
+
+
+
+
+
+----------------------------------------------------------------------------------------
+//Blocking.js
+
+
+-o modulo fs de file system serve para criação de arquivos no sistema atraves do node
+-o process.hrtime serve para pegar a hora atual , e o calculo [0]/60 converte a hora de minutos para segundos
+-readFileSync faz a leitura de um arquivo externo de forma sincronizada ao node 
+-o algoritimo de conexao bloqueante é executado de forma sequencial , ou seja ele precisa execultar um processo por vez e termina-lo antes de executar o proximo
+
+
+
+const fs = require("fs")
+
+console.log((process.hrtime()[0]/60).toFixed(5))
+console.log("Antes da leitura do arquivo")
+
+const dados = fs.readFileSync("file.txt")
+
+console.log("Executando apos arquivo")
+console.log(process.hrtime()[0]/60)
+
+
+
+-----------------------------------------------------------
+//Console
+
+
+-criar arquivo com conteudo ja inserido
+
+echo (texto ou numero) >> (nome do arquivo)
+
+-Duplicar conteudo do arquivo duplicando o proprio arquivo
+
+for /L %i in (1,1,14) do type file.txt >> file.txt

@@ -1,0 +1,57 @@
+//Pai.jsx
+
+
+-o useState seria um dos estados do modulo React , esse em especifico serve para definir um valor ou dado para um atributo
+-e o useState recebe um array de parametros entao na variavel podemos declarar uma tupla , como nesse exemplo, declaramos na variavel o atributo e um set para definir o valor a ser colocado nesse atributo
+
+
+import React , {useState} from "react";
+import Filho from "./Filho";
+
+export default props => {
+
+    const [x,y] = [23, 14]
+    
+    let [nome, setNome] = useState('Heitor')
+    let [idade, setIdade] = useState(15)
+    let [bool, setBool] = useState(true)
+    
+
+
+    function Info(nome, idade, bool){
+
+        setNome(nome)
+        setIdade(idade)
+        setBool(bool)
+
+    }
+   
+    return (
+        <div>
+            <div>Pai</div>
+            <IndiretaFilho clicar={Info}></IndiretaFilho>
+        </div>
+    )
+}
+
+-------------------------------------------------------------------
+//Filho.jsx
+
+import React from "react";
+
+
+export default props => {
+
+    const gerarIdade = ()=>{parseInt(Math.random() * (20)) + 50}
+    const gerarBool = ()=> Math.random() > 0.5
+
+    return (
+        
+        <div>
+            <div>Filho</div>
+            <button onClick={(e) => {props.clicar('Jonas', gerarIdade(), gerarBool())}}>
+                Info
+            </button>
+        </div>
+    )
+}

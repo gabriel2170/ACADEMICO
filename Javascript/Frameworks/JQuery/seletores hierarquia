@@ -1,0 +1,16 @@
+-comando css serve para alterar o estilo ou parte visual de todo elemento declarado no jquery
+-utilizando o sinal de > no seletor informa que voce esta selecionando um elemento proximo do main como no exemplo
+-utilizar o {} no css do jquery permite mudar mais de um estilo do elemento
+-colocar o + no seletor quer dizer para selecionar todos os elementos iguais e proximos da classe paragrafo nesse exemplo
+
+
+$('h1').css('fontFamily', 'Arial')
+
+$('main h1').css('color', 'red')
+
+$('main>.title').css('border', 'solid 2px blue')
+
+$('.paragrafo+p').css({
+    'background-color': 'red',
+    'color': 'white'
+})

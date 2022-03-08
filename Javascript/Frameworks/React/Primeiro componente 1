@@ -1,0 +1,36 @@
+//primeiro.jsx
+
+//export serve para exportar o componente para uso externo no react
+//default define o export como padrao
+
+export default function Primeiro(){
+    return 'first component'
+}
+
+
+
+
+
+
+---------------------------------------------------------------------------------
+//index.js
+
+//para representar os componentes exportados no caso do componente (Primeiro) é nessesario representalo em tags 
+
+import ReactDOM from 'react-dom'
+import React from 'react'
+import './index.css'
+import Primeiro from './primeiro'
+
+
+ReactDOM.render(
+
+  <div>
+    <Primeiro></Primeiro>
+  </div>
+  
+  ,
+  document.getElementById('root')
+)
+
+---------------------------------------------------------------------------------

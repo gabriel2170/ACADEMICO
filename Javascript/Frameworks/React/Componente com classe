@@ -1,0 +1,121 @@
+//Contador.jsx
+
+-a classe abaixo esta referenciando com o extends uma das ferramentas do React o Component para poder utiliza-lo abaixo como uma subclasse
+-o construtor pode ser declarado recebendo como valores iniciais os dados contidos no props 
+-se tratando de uma classe todos os atributos abaixo precisam ter o this antes 
+-abaixo declaramos o state , pertencendo ao modulo Component ele determina o valor inicial dos objetos que nos declaramos dentro dele como o caso do num e do pass
+-tambem podemos declarar outros atributos como o state igual o inc, dec e setPass, mas lembre-se de colocar sempre ()=> pois ele precisa de uma funcao para poder alterar o valor desses estados depois
+
+
+import React, { Component } from "react";
+import PassoForm from "./PassoForm";
+import Display from "./Display";
+import Botoes from "./Botoes";
+
+export default class Contador extends Component {
+
+   constructor(props) {
+         super(props)  
+         
+         this.state = {
+             num: this.props.numInicial || 0,
+             pass: this.props.passInicial || 0,
+         }
+     }
+
+
+
+    inc = () => {
+        this.setState({
+            num: this.state.num + this.state.pass
+        })
+    }
+
+    dec = () => {
+        this.setState({
+            num: this.state.num - this.state.pass
+        })
+    }
+
+    setPass = (e) => {
+        this.setState({
+            pass: e.target.value,
+        })
+    }
+
+    render() {
+        return (
+            <div>
+                <Display num={this.state.num}></Display>
+                <PassoForm pass={this.state.pass} setPass={this.setPass}/>
+                <Botoes inc={this.inc} dec={this.dec}></Botoes>
+            </div>
+        )
+    }
+}
+
+----------------------------------------------------------------------
+//Display.jsx
+
+-o valor num foi declarado inicialmente no componente contador.jsx, esse atributo pode ser representado tambem com e.target.value, sendo o valor inicial dessa funcao na classe
+
+import React from "react";
+
+export default props => {
+    return (
+        <div>
+            <h3>{props.num}</h3>
+        </div>
+    )
+}
+
+----------------------------------------------------------------------
+//PassoForm.jsx
+
+-no imput o parametro value esta armazenando o pass declarado no component contador.jsx, nele esta contido o valor atual do num 
+-e logo abaixo no metodo onChange , quando ouver mudanca do atributo num , o pass vai ser substituido pelo valor do setPass que ele vai armazenar atravez do parametro e 
+-isso quando o num for aumentando com o estado inc() ou reduzindo com o estado dec() 
+
+import React from "react";
+
+export default props => {
+    return (
+        <div>
+            <h2>Contador</h2>
+            <div>
+                <label htmlFor="passInput"></label>
+                <input
+                    id='passInput'
+                    type='number'
+                    value={props.pass}
+                    onChange={(e)=>{props.setPass(e.target.value)}}
+                />
+            </div>
+        </div>
+    )
+}
+-----------------------------------------------------------------------
+//Botoes.jsx
+
+-abaixo os botoes para aumentar esta armazenando o estado inc() e para diminuir esta armazenando o estado dec() 
+-ambos os estados foram declarados inicialmente no componente contador.jsx
+
+import React from "react";
+
+
+export default props => {
+    return (
+        <div>
+            <button onClick={props.inc}>+</button>
+            <button onClick={props.dec}>-</button>
+        </div>
+    )
+}
+
+
+
+
+
+
+
+

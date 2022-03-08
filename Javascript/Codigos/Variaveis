@@ -1,0 +1,17 @@
+
+-no javascript existem 3 formas de declarar uma variavel, utilizando var , let ou const , porem cada uma delas tem certas limitacoes no algoritmo
+-no caso do var ele serve para declarar variaveis globais, que podem ser chamadas e modificadas em qualquer lugar do alguritmo
+-o let ao contrario do var declara variaveis que so podem ser modificadas ou chamadas dentro de uma funcao ou classe ou do proprio main , mas nunca de forma global
+-o const ele serve para declarar variaveis que nao poderam ser modificadas , que permanecem constantes ao longo de todo algoritmo
+
+
+var x = 10 
+
+
+function(){
+  let a = 15
+}
+
+const http = require('http')
+const url = require('url')
+const fs = requite('fs')

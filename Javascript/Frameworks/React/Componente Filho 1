@@ -1,0 +1,47 @@
+//familia.jsx
+
+-ha 2 formas de passar parametros do atributo pai par o atributo filho no caso desse exemplo de familia.jsx para familiaMembro.jsx
+-a primeira é colocar um atributo declarado na tag do filho localizado no pai para receber um dado do index.js , atribuindo o atributo no familia e no familiaMembro 
+-outra forma seria utilizar o metodo spread de espalhar, que seria colocar {...props} de forma a espalhar o dado do atributo para o familia e tudo que for declarado dentro do familiaMembro
+
+
+import React from 'react'
+import FamiliaMembro from './familiaMembro'
+
+
+export default props => {
+    return (
+        <div>
+            <FamiliaMembro nome='Pedro' sobrenome={props.sobrenome}></FamiliaMembro>
+            <FamiliaMembro nome='Ana' {...props}></FamiliaMembro>
+            <FamiliaMembro nome='Joao' {...props}></FamiliaMembro>
+        </div>
+    )
+}
+
+-----------------------------------------------------------------------------
+//familiaMembro.jsx
+
+import React from 'react'
+
+export default props => {
+    return (
+        <span>
+           {props.nome} <strong>{props.sobrenome}</strong>
+        </span>
+    )
+}
+
+-----------------------------------------------------------------------------
+//App.js
+
+import './App.css'
+import React from 'react'
+import Familia from './familia'
+
+export default () => (
+
+    <div className='App' >       
+         <Familia sobrenome='lima'></Familia>                
+    </div>
+);

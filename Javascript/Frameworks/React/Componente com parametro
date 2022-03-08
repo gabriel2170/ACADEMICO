@@ -1,0 +1,46 @@
+//ComParametro.jsx
+
+-o parametro props esta armazenando os dados dos parametros titulo e subtitulo apos rederizados dentro do index
+-e podemos utilizar o props por exemplo como um objeto ou uma estrutura para manipular mais de um dado nele 
+
+
+import React from 'react'
+
+export default function ComParametro(props) {
+    const aluno = props.aluno
+    const nota = props.nota
+    const disc = props.disciplina
+    const status = props.nota >= 7 ? 'Aprovado' : 'Recuperacao'
+    return (
+        <div>          
+           <p><strong>{aluno} Tem Nota {nota} na Disciplina {disc} e está {status}</strong></p>
+        </div>
+
+       
+    )
+}
+--------------------------------------------------------------------------------------------------------
+//index.js
+
+-Todo parametro passado nas tegs h2 e h3 no arquivo ComParametro sao passados dentro do react como se fossem IDs ou classes
+-Da mesma forma que o primeiro componente o segundo tambem é passado no react como uma tag
+-E nos parametros titulo e subtitulo estamos passando dados de dentro do render para o ComParametro.jsx
+
+
+import ReactDom from 'react-dom'
+import React from 'react'
+import './index.css'
+import ComParametro from './ComParametro'
+
+
+
+ReactDom.render(
+  <div>
+    <ComParametro aluno='Gabriel' nota={9.5} disciplina='matematica'></ComParametro>
+    <ComParametro aluno='Marlom' nota={6.5} disciplina='matematica'></ComParametro>
+  </div>
+  ,
+  document.getElementById('root')
+
+
+)

@@ -1,0 +1,22 @@
+-quando colocamos como value de um input uma variavel de um component controlado como o useState onde ela esta envolvida , o input nao pode ser deretamente alterado
+-como no caso da variavel nome, mas se utilizarmos o setNome no metodo onChange , so precisamos colocar no onChange uma funcao tendo o parametro e 
+-sendo que esse e possui um evento para identificar qualquer entrada de dados ou tecla digitada pelo usuario o (e.target.value) 
+
+import React, { useState } from "react";
+
+function Hooks(props) {
+
+    const [nome, setNome] = useState('gabriel')
+    return (
+        <div>
+            <input type="text"
+                value={nome}
+                onChange={(e)=>{setNome(e.target.value)}}            
+            />
+        </div>
+    )
+}
+
+
+
+export default Hooks

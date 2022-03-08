@@ -1,0 +1,139 @@
+//app.jsx
+
+-o metodo BrowserRouter serve para implementar a navegacao entre os components usando o react router  
+-podemos simplificar os nomes dos metodos de um import usando o comando a palavra (as) como no caso do BrowserRouter para Router
+
+import React from "react";
+import './app.css'
+import Menu from './menu'
+import Content from './content'
+import { BrowserRouter as Router} from "react-router-dom";
+
+const App = (props) => {
+    <div className="app">
+        <Router>
+            <Menu></Menu>
+            <Content></Content>
+        </Router>
+    </div>
+}
+
+export default App
+
+-------------------------------------------------------------------------------
+//content.jsx
+
+-utilizamos uma biblioteca especifica para clicar sistemas de navegacao de guias, chamasse react-router-dom
+-nessa parte utilizamos 2 parametros para implementar a navegacao entre os componentes desse projeto
+-o switch para informar as rotas do sistema de navegacao , e o route para informar a direcao dessas rotas ou seja o component 
+
+
+import React from "react";
+import './content.css'
+import { Switch, Route } from "react-router-dom";
+import About from './about'
+import Home from './home'
+import Param from "./param";
+
+const Content = (props)=>{
+
+    <aside className="content">
+        <Switch> 
+            <Route path='/about'>
+                <About/>
+            </Route>
+
+            <Route path='/param/:id'>
+                <Param/>
+            </Route>
+
+            <Route path='/'>
+                <Home/>
+            </Route>
+        </Switch>
+    </aside>
+}
+
+
+
+export default Content
+---------------------------------------------------------------------------
+//menu.jsx
+
+-o metodo Link tem o mesmo conceito de uma tag a, ela tbm faz um link com um elemento pra no momento que vc clicar nele ele direciona para a pagina que foi informada na tag
+-nesse caso ele esta sendo usado para direcionar para um outro component desse projeto
+-repara que podemos tbm incluir parametros nos enderecos dos links , de forma que esses parametros sao passados pelos components informados nas tags Route dentro da tag Switch
+
+
+
+import React from "react";
+import './menu.css'
+import {Link} from 'react-router-dom'
+
+const Menu = (props)=>{
+
+    <aside className="menu">
+        <nav>
+            <ul>
+                <li>
+                    <Link to='/'>Inicio</Link>
+                </li>
+            
+                <li>
+                    <Link to='/param/321'>Param #01</Link>
+                </li>
+                <li>
+                    <Link to='/param'>Param #02</Link>
+                </li>
+                <li>
+                    <Link to='/about'>Sobre</Link>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+}
+
+
+
+export default Menu
+-----------------------------------------------------------------------------------
+//param.jsx
+
+-o metodo de useParams serve para implementar o id dos parametros recebidos pelas tags Link e passados palas tags Route
+-De forma para podermos representar esses parametros no HTML 
+
+import React from "react";
+import { useParams } from 'react-router-dom'
+
+const Param = (props) => {
+    const {id} = useParams()
+    return (
+        <div className="Param">
+            <h1>Param</h1>
+            <p>Valor: {id}</p>
+        </div>
+    )
+}
+
+
+
+export default Param
+-----------------------------------------------------------------------------------
+//about.jsx
+
+import React from "react";
+
+const About = (props)=>{
+
+    <aside className="about">
+        <h1>About</h1>
+        <p>Sistema sendo criado</p>
+    </aside>
+}
+
+
+
+export default About
+
+
+

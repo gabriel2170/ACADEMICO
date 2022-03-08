@@ -1,0 +1,23 @@
+-o uso do useState() serve para declarar variaveis do tipo array que vao 2 valores, sendo que atribuimos o primeiro valor no useState()
+-o primeiro valor do array sendo o x, sera o valor atual , e o segundo valor sendo o setX , sera um metodo para alterar o primeiro valor , como se fosse um get e set 
+-e usando o metodo onClick em 2 botoes , quando eles forem clicados vai chamar o setX no useState para alterar o x
+
+import React, { useState } from "react";
+
+export default () => {
+    const [x, setX] = useState(15)
+
+    return (
+
+        <div className="center">
+            <span className="text">{x}</span>
+            <div>
+                <button onClick={()=> setX(x + 1)} className="btn">+1</button>
+                <button onClick={()=> setX(x - 1)} className="btn">-1</button>
+     
+            </div>
+
+        </div>
+
+    )
+}

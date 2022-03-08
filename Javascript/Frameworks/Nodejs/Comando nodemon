@@ -1,0 +1,13 @@
+
+-ao utilizar o comando nodemon , permitimos que a aplicaçao nunca deixe de ser execultada 
+-e de certa forma o nodemon faz atualizações no console no momento em que modificamos e salvamos no editor
+-para utilizar o nodemon basta colocar nodemon e nome do arquivo.js ao invez do comando node
+-necessario antes instalar o nodemon , npm install nodemon
+
+
+const car = 'BMW'
+const moto = "Honda"
+
+console.log(`Carro: ${car}`)
+
+console.log(`Moto: ${moto}`)

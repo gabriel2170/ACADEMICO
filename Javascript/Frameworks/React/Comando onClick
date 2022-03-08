@@ -1,0 +1,49 @@
+//Filho.jsx
+
+
+-o Onclick foi usado como um evento para quando voce clica em um elemento, como um button por exemplo, e nesse caso ao clicar ele envia para um atributo clicar armazenado no props dados para 3 atributos child do props
+-sendo que esses atributos child estao localizados no component Pai.jsx
+
+
+import React from "react";
+
+export default props => {
+
+    return (
+        <div>
+            <div>Filho</div>
+            <button onClick={(e) => {props.clicar('Jonas', 24, true)}}>
+                Info
+            </button>
+        </div>
+    )
+}
+-------------------------------------------------------------------
+//Pai.jsx
+
+-e aqui usando o atributo clicar que obteve o metodo onClick, passamos como parametro a function Info, de forma que ele vai armazenar os valores enviados do clicar em 3 variaveis nome, idade e bool e depois reproduzi-los
+
+
+import React from "react";
+import Filho from "./Filho";
+
+
+export default props => {
+    function Info(nome, idade, bool){
+         //console.log(nome, idade, bool)  
+         alert(nome)
+         alert(idade)
+         alert(bool)
+
+    }
+   
+    return (
+        <div>
+            <div>Pai</div>
+            <Filho clicar={Info}></Filho>
+        </div>
+    )
+}
+
+
+

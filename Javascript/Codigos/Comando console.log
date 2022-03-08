@@ -1,0 +1,10 @@
+-console.log serve para escrever no console o valor de uma variavel , um numero ou qualquer string inserida no comando
+
+var = nome 
+
+nome = "gabriel"
+
+
+Console.log('Hello')
+
+console.log(nome)

@@ -1,0 +1,19 @@
+-Metodo de JSX é quando inserimos HTML diretamente dentro do render do react, igual na tag div
+-uma forma de inserir variaveis dentro do render do react é utilizando {}
+-render serve para redenrizar qualquer conteudo do react no HTML
+
+
+import ReactDOM from 'react-dom'
+import React from 'react'
+
+
+const tag = <strong>Ola react</strong>
+
+ReactDOM.render(
+
+  <div>
+    {tag} 
+  </div>,
+  
+  document.getElementById('root')
+)

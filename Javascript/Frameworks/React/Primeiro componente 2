@@ -1,0 +1,27 @@
+//primeiro.jsx
+
+import React from 'react'
+
+export default function Primeiro(){
+    const msg = 'Seja bem vindo(a)!'
+    return <div>
+            <h2>Primeiro componente</h2>
+            <p>{ msg }</p>
+    </div>
+}
+
+---------------------------------------------------------
+//index.js
+
+import ReactDOM from 'react-dom'
+import React from 'react'
+import './index.css'
+import Primeiro from './components/basicos/primeiro'
+
+
+ReactDOM.render(
+  <div>
+    <Primeiro></Primeiro>
+  </div>,
+  document.getElementById('root')
+)

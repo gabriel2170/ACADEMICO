@@ -1,0 +1,47 @@
+//index.js
+
+-declarar um componente de forma que vc coloca so a tag <nome do component/> é uma forma de declaracao simples do component
+-igual no exemplo abaixo com a declaracao do <App/>
+
+import ReactDom from 'react-dom'
+import React from 'react'
+import './index.css'
+import App from './App'
+
+
+ReactDom.render(
+  <App/>
+  ,
+  document.getElementById('root')
+
+
+)
+
+
+-------------------------------------------------------------------
+//App.jsx
+
+-a function nao precisa ter um nome , pode ser criada de forma anonima 
+-o simbolo => representa uma function e permite fazer o retorno da funcao sem o return 
+-o simbolo _ significa que a funcao nao recebera parametros
+-0 simbolo () na funcao serve para deixar a funcao formatada 
+
+import React from 'react'
+import Primeiro from './components/primeiro'
+import ComParametro from './components/ComParametro'
+import Fragmento from './components/fragmento'
+
+
+export default () => (
+    
+    <div>
+        <Fragmento />
+        <ComParametro
+            aluno='Gabriel'
+            nota={9.5}
+            disciplina='matematica'
+        />
+        <Primeiro></Primeiro>
+        
+    </div>
+);

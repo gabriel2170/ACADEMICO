@@ -1,0 +1,19 @@
+-podemos selecionar nao apenas um botao como no caso de button, devemos utilizar o : antes do button de forma que selecionamos todos os inputs que sejam do tipo button tambem
+-o mesmo se aplica para o checkbox ou qualquer outro elemento contindo em uma tag com id ou class
+-o trigger serve para verificar se no checkbox o elemento foi ou nao clicado para marcar a caixa do checkbox
+-o change serve para verificar se no elemento radio foi marcado uma das opcoes disponiveis do radio, ou seja se ouve mudanca entre as opcoes
+-utilizamos o [type-radio] para pegar o elemento radio principal do HTML
+-utilizamos o input:checked para referenciar a um elemento checkbox que esteja marcado
+
+$('#register :button').text().css('width' , '25px')
+
+$('#register button').text().css('opacity', '0.6')
+
+$('#register :checkbox').trigger('click')
+
+$('[type-radio]').change(()=>{
+    let value = $('input:checked').val()
+    let s = (value == M) ? 'Masculino' : 'Feminino'
+
+    alert('Sexo: ' + s)
+})

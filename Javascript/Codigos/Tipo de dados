@@ -1,0 +1,22 @@
+
+
+-como o javascript é uma linguagem com fraca tipagem de dados, utilizamos de funcoes para declarar qual o tipo de dados da variavel
+-podemos definir o dado de uma variavel como Number, String ou Boolean 
+-o metodo isInteger serve para verificar se a variavel é do tipo Number ou nao
+-o metofo toFixed serve para limitar a quantidade de casas decimais a serem mostradas de um numero no console.log
+
+
+let x1 = 25
+let x2 = Number('542')
+let nome = String(234532)
+let veri = Boolean(1)
+
+
+console.log(Number.isInteger(x1))
+console.log(Number.isInteger(x2))
+console.log(typeof nome == 'string')
+console.log(typeof veri == 'boolean')
+
+let y = 12.2344334343
+
+console.log(y.toFixed(2))

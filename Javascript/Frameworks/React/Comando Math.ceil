@@ -1,0 +1,23 @@
+
+-Nao é possivel alterar dados do parametros , sao somente para leitura
+-mas vc pode usar outras varivaies e substituir com os parametros para poder manipular os dados
+-No caso da funcao Math.ceil ela faz um arredodamento em numeros que nao sao inteiros 
+
+
+import React from 'react'
+
+export default function ComParametro(props) {
+    const aluno = props.aluno
+    const nota = props.nota
+    const disc = props.disciplina
+    const status = props.nota >= 7 ? 'Aprovado' : 'Recuperacao'
+
+    const notaInt = Math.ceil(props.nota)
+    return (
+        <div>          
+           <p><strong>{aluno} Tem Nota {notaInt} na Disciplina {disc} e está {status}</strong></p>
+        </div>
+
+       
+    )
+}

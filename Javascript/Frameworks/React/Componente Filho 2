@@ -1,0 +1,59 @@
+//familia.jsx
+
+-children faz referencia a todos os atributos filhos localizados no componente pai ou raiz como index.js
+-com o {} voce tambem consegue declarar metodos , nao so atributos
+-o cloneElement faz um clone do elemento declarado , nele voce pode colocar 2 ou ate mais parametros
+-e repara que no import acima , podemos declarar ferramentas de modulos separadamente utilizando o {} , de forma pra nao precisar nesse caso colocar React antes de cloneElement
+-o children.map seleciona um mapa de elementos que sao child de um componente , nele vai 2 parametros, o elemento child e uma funcao com o que vc vai retornar desse elemento child
+
+import React, {cloneElement} from 'react'
+import FamiliaMembro from './familiaMembro'
+
+export default props => {
+    return (
+        <div>
+            {
+                React.Children.map(props.children, (child)=>{
+                    return cloneElement(child, props)
+                })
+            }
+        </div>
+    )
+}
+
+-------------------------------------------------------------
+//familiaMembro.jsx
+
+import React from 'react'
+
+export default props => {
+    return (
+        <span>
+           {props.nome} <strong>{props.sobrenome}</strong>
+        </span>
+    )
+}
+-------------------------------------------------------------
+//App.jsx
+
+import './App.css'
+import React from 'react'
+import Familia from './components/familia'
+import FamiliaMembro from './components/familiaMembro'
+
+
+export default () => (
+
+    <div className='App' >                  
+           <Familia sobrenome='lima'>
+                 <FamiliaMembro nome='Pedro'></FamiliaMembro>
+                 <FamiliaMembro nome='Ana'></FamiliaMembro>
+                 <FamiliaMembro nome='Joao'></FamiliaMembro>
+           </Familia>              
+    </div>
+);
+
+
+
+
+
