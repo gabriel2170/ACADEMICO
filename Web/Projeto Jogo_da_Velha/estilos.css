@@ -1,0 +1,94 @@
+h1 {
+	font-family:Arial;
+	font-size:36px;
+	color:#333;
+	width:400px;
+	text-align:center;
+	border-bottom:dotted 1px #ccc;
+	text-transform:uppercase;
+	margin:30px auto 20px auto;
+}
+
+#box_jogo {
+	background-color:#ccc;
+	height:210px;
+	width:400px;
+	margin:0 auto 20px auto;
+}
+
+.bloco {
+	background-color:#FFF;
+	width:30%;
+	height:60px;
+	margin:0 5% 15px 0;
+	float:left;
+	transition:all 0.4s linear;
+	cursor:pointer;
+	text-align: center;
+    font-size: 42px;
+    font-family: Arial;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.bloco:hover {
+	background-color:#dba7ef;
+}
+
+#l1c3, #l2c3, #l3c3 {
+	margin-right:0;
+}
+
+#l3c1, #l3c2, #l3c3 {
+	margin-bottom:0;
+}
+
+#box_form {
+	width:300px;
+	margin:0 auto;
+	text-align:center;
+}
+
+#box_form input {
+	width:100%;
+	border:solid 1px #CCC;
+	height:30px;
+	margin-bottom:10px;
+}
+
+#box_jog_1, #box_jog_2 {
+	border:dashed 3px #333;
+	font-family:Arial;
+	text-transform:uppercase;
+	color:#333;
+	text-align:center;
+	padding:15px 30px;
+	width:150px;
+	position:absolute;
+	top:10px;
+}
+
+#box_jog_1 {
+	left:10px;
+}
+
+#box_jog_2 {
+	right:10px;
+}
+
+.simbolo {
+	font-size:40px;
+	font-weight:bold;
+}
+
+.ativo {
+	background-color:#dba7ef;
+}
+
+.vencedor {
+	background-color:#7de892;
+}
+
+
+
+

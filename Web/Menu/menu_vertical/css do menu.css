@@ -1,0 +1,82 @@
+#menu {
+	margin:0;
+	padding:0;
+	height:26px;
+	width: 100px;
+}
+
+#menu .menu {
+	list-style:none;
+	height:20px;
+	margin-top:3px;
+	padding:0 15px;
+	transition:all 0.3s linear;
+	position:relative;
+	background-color: lightgray;
+}
+
+#menu .menu:first-child {
+	border-left:none;
+}
+
+#menu .menu:last-child {
+	border-right:none;
+}
+
+#menu .menu > span {
+	font-family:Arial;
+	font-size:12px;
+	color:#333;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+#menu .menu:hover {
+	cursor:pointer;
+	background-color:#666;
+}
+
+#menu .menu:hover > span {
+	color:#FFF;
+}
+
+ul.submenu {
+	display:none;
+	margin:0;
+	padding:10px;
+	background-color:#666;
+	position:absolute;
+	top:20px;
+	left:100;
+	top:0;
+	width:135px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	box-shadow:2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+ul.submenu li.submenu {
+	list-style:none;
+	padding:3px 0;
+	border-bottom:dotted 1px #FFF;
+}
+
+ul.submenu li.submenu span {
+	font-family:Arial;
+	font-size:12px;
+	color:#ccc; 
+	display:block;
+	padding:3px 5px;
+	border-radius:5px;
+}
+
+ul.submenu li.submenu:hover span {
+	background-color:#333;
+	color:#FFF;
+	cursor:pointer;
+	transition:all 0.3s linear;
+}
+
+#menu li.menu:hover ul.submenu {
+	display:block;
+}
