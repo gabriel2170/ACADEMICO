@@ -1,0 +1,62 @@
+.title{
+    width: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    color:#1b1b1b;
+    padding: 14px;
+    position: relative;
+    text-align: center;
+
+}
+
+.headerBg2{
+    margin-top: -70px;
+    background-color: #ccc;
+    height: 25vh;
+    width: auto;
+}
+
+.headerArea {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.box{   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+
+.endereco{
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    
+}
+
+.small{
+    font-size: 25px;
+    width: 150px;
+}
+.uf{
+    font-size: 25px;
+    width: 40px;
+}
+.num{
+    font-size: 25px;
+    width: 60px;
+}
+.big{
+    font-size: 25px;
+    width: 100%;
+}
+.tel{
+    font-size: 25px;
+    width: 190px;
+    margin-right: 15px;
+}
+
+.telefone{
+    display: flex;
+    flex-direction: row;
+}

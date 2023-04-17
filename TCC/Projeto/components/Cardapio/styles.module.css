@@ -1,0 +1,77 @@
+.container {
+    background-color: #fff;
+    box-shadow: 0px 2px 15px #000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+}
+
+.head {
+    height: 15vh;
+    background-color: #bbb;
+}
+
+.info {
+    padding: 15px;
+}
+
+.info .img {
+    text-align: center;
+    margin-top: -90px;
+}
+
+.info .img img {
+    width: 100%;
+    height: auto;
+}
+
+.info .tName {
+    font-size: 12px;
+    color: #000;
+}
+
+.info .name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.info .price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonAlterar{
+    background-color: rgb(255, 197, 38);
+    color: black;
+    height: 50px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+  }
+
+  .buttonAlterar:hover{
+    cursor: pointer;
+  }
+
+.buttonDel{
+    background-color: rgb(255, 0, 0);
+    color: black;
+    height: 50px;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+}
+.buttonDel:hover{
+    cursor: pointer;
+}

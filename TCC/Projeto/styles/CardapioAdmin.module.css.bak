@@ -1,0 +1,89 @@
+/* Styles 2 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0px 2px 15px #000;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 25px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.head {
+    height: 15vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.info {
+    padding: 15px;
+}
+
+.infoTitle {
+    font-weight: bold;
+    font-size: 24px;
+    color: #000;
+    padding: 10px 0px 5px 0px;
+}
+
+.infoItem {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    padding-bottom: 3px;
+}
+
+.infoPrice {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info .img {
+    text-align: center;
+    margin-top: -90px;
+}
+
+.info .img img {
+    width: 160px;
+    height: 250px;
+}
+
+.buttonAdd {
+    background-color: #00ff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 20%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonChange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: #ffff00;
+    border-radius: 10px;
+    margin: 10px 10px;
+}
+
+.buttonDelete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: #ff0000;
+    border-radius: 10px;
+    margin: 10px 10px;
+}

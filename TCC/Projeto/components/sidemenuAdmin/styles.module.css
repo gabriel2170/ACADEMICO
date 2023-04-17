@@ -1,0 +1,87 @@
+.container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    background-color: #fff;
+    z-index: 999;
+    transition-duration: 0.5s;
+    overflow: scroll;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 65px 25px 0 25px;
+    position: relative;
+}
+
+.header .loginArea {
+    border-bottom: 2px solid #000;
+    margin-left: 15px;
+    padding-bottom: 50px;
+    min-width: 200px;
+    width: 100%;
+    display: flex;
+}
+
+.header .closeBtn {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    font-size: 20px;
+}
+
+.header .user h1{
+    font-weight: bold;
+    font-size: 28px;
+    color: #000;
+}
+
+.line1 {
+    border-bottom: 2px solid #ccc;
+    margin-top: -2px;
+}
+
+.menu {
+    flex: 1;
+    background-color: #fff;
+    padding:25px 35px;
+    flex-direction: column;
+}
+
+.line2 {
+    border-bottom: 2px solid #ccc;
+    margin-top: -2px;
+}
+
+.leave {
+    display: flex;
+    padding:25px 35px;
+    flex-direction: column;
+}
+
+.logOff{
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10%;
+}
+
+.user{
+    font-size: 25px;
+    font-weight: bold;
+}

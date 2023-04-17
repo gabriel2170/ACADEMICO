@@ -1,0 +1,46 @@
+.container {
+    background-color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.head {
+    height: 15vh;
+    background-color: #bbb;
+}
+
+.info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .img img {
+    width: 100%;
+    height: auto;
+}
+
+.info .tName {
+    font-size: 18px;
+    color: #000;
+}
+
+.info .name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+}
+
+.info .price {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.line {
+    border-top: 1.5px solid #666;
+    margin: -1px 24px 0 24px;
+}

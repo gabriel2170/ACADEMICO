@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.paymentArea {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.centerSide{
+    margin: 10px;
+}
+
+.leftSide {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.rightSide {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}

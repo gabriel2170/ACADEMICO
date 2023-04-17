@@ -1,0 +1,184 @@
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerArea {
+    padding: 25px
+}
+
+.titleArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 80px;
+    color: #1b1b1b;
+    position: relative;
+    width: fit-content;
+}
+
+.line {
+    border-top: 1.5px solid #666;
+    margin: -1px 24px 0 24px;
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.box {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.status {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+
+
+.itemTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.qtd {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.priceTitle {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.btns {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50%;
+    background-color: #0f0;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #000;
+    cursor: pointer;
+}
+
+.btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50%;
+    background-color: #f00;
+    border-radius: 20px;
+    border: 1px solid;
+    border-color: #000;
+    cursor: pointer;
+}
+
+
+.infoAddress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.addressTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.address {
+    margin-bottom: 10px;
+}
+
+.tel {
+    margin-top: 10px;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: #0f0;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.line1 {
+    border-top: 1.5px solid #666;
+    margin: 10%;
+}

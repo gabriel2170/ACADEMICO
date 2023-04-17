@@ -1,0 +1,74 @@
+.container {
+    background-color: #fff;
+}
+
+.headerArea {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.headerBg {
+    margin-top: -70px;
+    background-color: #ccc;
+    height: 35vh;
+}
+
+.productImage {
+    text-align: center;
+    margin-top: -15vh;
+}
+
+.productImage img {
+    width: auto;
+    height: 20vh;
+}
+
+.category {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1b1b1b;
+    margin: 10px 24px 16px 24px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 24px;
+    color: #1b1b1b;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid #000;
+    position: relative;
+    width: fit-content;
+}
+
+.line {
+    border-top: 1.5px solid #666;
+    margin: -1px 24px 0 24px;
+}
+
+.qtText {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1b1b1b;
+    margin: 30px 24px 5px 24px;
+}
+
+.area {
+    margin: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.areaRight {
+    flex: 1;
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.button {
+    width: 95%;
+    margin: auto;
+}

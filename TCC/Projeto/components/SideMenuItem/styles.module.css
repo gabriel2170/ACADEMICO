@@ -1,0 +1,15 @@
+.container {
+    font-weight: bold;
+    font-size: 22px;
+    color: #333;
+    padding: 10px;
+}
+
+.container span{
+    cursor: pointer;
+}
+
+.container span:hover{
+    color: black;
+    text-decoration: underline;
+}

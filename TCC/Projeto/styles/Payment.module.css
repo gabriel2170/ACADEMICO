@@ -1,0 +1,105 @@
+.container {
+    background-color: #fff;
+}
+
+.header {
+    padding: 25px;
+}
+
+.paymentArea {
+    width: 100%;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 32px;
+    color: #1b1b1b;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    border-bottom: 1px solid #ccc;
+    margin: 0 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1b1b1b;
+    display: flex;
+    align-items: flex-start;
+    margin: 2vh 0vw 0vh 5vw;
+}
+
+.paymentType {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.paymentBtn {
+    width: 100%;
+}
+
+.infoTitle {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1b1b1b;
+    display: flex;
+    align-items: flex-start;
+    margin: 2vh 0vw 0vh 3vw;
+}
+
+.infoBody {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-self: start;
+    flex-direction: column;
+}
+
+.parcel {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: #000;
+    margin: 2vh 0vw 0vh 2vw;
+}
+
+.finalPrice {
+    font-weight: bold;
+    font-size: 20px;
+    color: #1b1b1b;
+    display: flex;
+    margin-top: 2vh;
+    justify-content: center;
+}
+
+.button {
+    width: 95%;
+    margin: auto;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#troco {
+    font-size: 20px;
+    width: 80px;
+    margin: 3vw;
+}
+
+#parcela {
+    font-size: 20px;
+    width: 80px;
+    margin: 3vw;
+}
